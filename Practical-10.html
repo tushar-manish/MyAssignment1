@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Practical-10</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+			box-sizing: border-box;
+			font-family: arial;
+		}
+		.header{
+			width: 100%;
+			height: 70px;
+			background-color: #2f3640;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: sticky;
+			top: 0;
+		}
+		.header img{
+			width: 70px;
+			height: 70px;
+			margin-right: 15px;
+		} 
+		.header h1{
+			line-height: 70px;
+			color: white;
+		}
+		.content{
+			width: 100%;
+			padding: 20px;
+			float: right;
+			transition: all 0.7s;
+		}
+		.content img{
+			width: 100%;
+			max-width: 700px;
+			display: block;
+			margin: 0px auto 20px auto;
+		}
+		.content p{
+			text-align: justify;
+		}
+		.sidebar{
+			width: 20%;
+			height: 100%;
+			position: fixed;
+			top: 70px;
+			background-color: #353b48;
+			left: -100%;
+			transition: all 0.7s;
+		}
+		.sidebar ul{
+			list-style: none;
+		}
+		.sidebar ul li{
+			border-bottom: 2px solid rgba(255,255,255,0.1);
+		}
+		.sidebar ul li a{
+			display: block;
+			text-decoration: none;
+			font-size: 20px;
+			color: white;
+			padding: 15px 25px;
+		}
+		a i{
+			margin-right: 15px;
+		}
+		.sidebar ul li a:hover{
+			border-left: 8px solid white;
+			transition: all 0.5s;
+		}
+		.social{
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			border-bottom: 2px solid rgba(255,255,255,0.1);
+			border-top: 2px solid rgba(255,255,255,0.1);
+			position: fixed;
+			bottom: 0;
+			width: 20%;
+			font-size: 30px;
+			padding: 15px 20px;
+		}
+		i{
+			color: white;
+		}
+		.show-btn, .hide-btn{
+			font-size: 35px;
+			color: white;
+			position: fixed;
+			left: 50px;
+			top: 20px;
+		}
+		.hide-btn{
+			opacity: 0;
+		}
+		#chk{
+			visibility: hidden;
+			z-index: -10;
+		}
+		#chk:checked ~ .sidebar{
+			left: 0;
+		}
+		#chk:checked ~ .show-btn{
+			opacity: 0;
+		}
+		#chk:checked ~ .hide-btn{
+			opacity: 1;
+		}
+		#chk:checked ~ .content{
+			width: 80%;
+		}
+		@media(max-width: 768px){
+			.sidebar{
+				width: 100%;
+			}
+			.social{
+				width: 100%;
+			}
+			.header h1{
+				display: none;
+			}
+			.sidebar ul{
+				text-align: center;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<img src="../images/logo.png">
+		<h1>FULLSTACK</h1>
+	</div>
+	<input type="checkbox" id="chk">
+	<label for="chk" class="show-btn"><i class="fa fa-bars"></i></label>
+	<label for="chk" class="hide-btn"><i class="fa fa-times"></i></label>
+	
+	<div class="sidebar">
+		<ul>
+			<li><a href="#"><i class="fa fa-home"></i><span>Home</span></a></li>
+			<li><a href="#"><i class="fa fa-user"></i><span>About</span></a></li>
+			<li><a href="#"><i class="fa fa-tasks"></i><span>Services</span></a></li>
+			<li><a href="#"><i class="fa fa-rss"></i><span>Blog</span></a></li>
+			<li><a href="#"><i class="fa fa-id-card"></i><span>Contact Us</span></a></li>
+		</ul>
+		<div class="social">
+			<a href="#"><i class="fa fa-facebook-square"></i></a>
+			<a href="#"><i class="fa fa-youtube-square"></i></a>
+			<a href="#"><i class="fa fa-instagram"></i></a>
+		</div>
+	</div>
+	<div class="content">
+		<img src="../images/computer.jpg">
+		<p>India (Hindi: Bhārat), officially the Republic of India (Hindi: Bhārat Gaṇarājya),[23] is a country in South Asia. It is the second-most populous country, the seventh-largest country by land area, and the most populous democracy in the world. Bounded by the Indian Ocean on the south, the Arabian Sea on the southwest, and the Bay of Bengal on the southeast, it shares land borders with Pakistan to the west;[f] China, Nepal, and Bhutan to the north; and Bangladesh and Myanmar to the east. In the Indian Ocean, India is in the vicinity of Sri Lanka and the Maldives; its Andaman and Nicobar Islands share a maritime border with Thailand and Indonesia. Modern humans arrived on the Indian subcontinent from Africa no later than 55,000 years ago.[24] Their long occupation, initially in varying forms of isolation as hunter-gatherers, has made the region highly diverse, second only to Africa in human genetic diversity.[25] Settled life emerged on the subcontinent in the western margins of the Indus river basin 9,000 years ago, evolving gradually into the Indus Valley Civilisation of the third millennium BCE.[26] By 1200 BCE, an archaic form of Sanskrit, an Indo-European language, had diffused into India from the northwest, unfolding as the language of the Rigveda, and recording the dawning of Hinduism in India.[27] The Dravidian languages of India were supplanted in the northern and western regions.[28] By 400 BCE, stratification and exclusion by caste had emerged within Hinduism,[29] and Buddhism and Jainism had arisen, proclaiming social orders unlinked to heredity.[30] Early political consolidations gave rise to the loose-knit Maurya and Gupta Empires based in the Ganges Basin.[31] Their collective era was suffused with wide-ranging creativity,[32] but also marked by the declining status of women,[33] and the incorporation of untouchability into an organised system of belief.[g][34] In South India, the Middle kingdoms exported Dravidian-languages scripts and religious cultures to the kingdoms of Southeast Asia. In the early medieval era, Christianity, Islam, Judaism, and Zoroastrianism put down roots on India's southern and western coasts.[36] Muslim armies from Central Asia intermittently overran India's northern plains,[37] eventually establishing the Delhi Sultanate, and drawing northern India into the cosmopolitan networks of medieval Islam.[38] In the 15th century, the Vijayanagara Empire created a long-lasting composite Hindu culture in south India.[39] In the Punjab, Sikhism emerged, rejecting institutionalised religion.[40] The Mughal Empire, in 1526, ushered in two centuries of relative peace,[41] leaving a legacy of luminous architecture.[h][42] Gradually expanding rule of the British East India Company followed, turning India into a colonial economy, but also consolidating its sovereignty.[43] British Crown rule began in 1858. The rights promised to Indians were granted slowly,[44] but technological changes were introduced, and ideas of education, modernity and the public life took root.[45] A pioneering and influential nationalist movement emerged, which was noted for nonviolent resistance and became the major factor in ending British rule.[46] In 1947 the British Indian Empire was partitioned into two independent dominions, a Hindu-majority Dominion of India and a Muslim-majority Dominion of Pakistan, amid large-scale loss of life and an unprecedented migration. India has been a secular federal republic since 1950, governed in a democratic parliamentary system. It is a pluralistic, multilingual and multi-ethnic society. India's population grew from 361 million in 1951 to 1,211 million in 2011.[49] During the same time, its nominal per capita income increased from US$64 annually to US$1,498, and its literacy rate from 16.6% to 74%. From being a comparatively destitute country in 1951,[50] India has become a fast-growing major economy, a hub for information technology services, with an expanding middle class.[51] It has a space programme which includes several planned or completed extraterrestrial missions. Indian movies, music, and spiritual teachings play an increasing role in global culture.[52] India has substantially reduced its rate of poverty, though at the cost of increasing economic inequality.[53] India is a nuclear weapons state, which ranks high in military expenditure. It has disputes over Kashmir with its neighbours, Pakistan and China, unresolved since the mid-20th century.[54] Among the socio-economic challenges India faces are gender inequality, child malnutrition,[55] and rising levels of air pollution.[56] India's land is megadiverse, with four biodiversity hotspots.[57] Its forest cover comprises 21.4% of its area.[58] India's wildlife, which has traditionally been viewed with tolerance in India's culture,[59] is supported among these forests, and elsewhere, in protected habitats.</p>
+	</div>
+</body>
+</html>
